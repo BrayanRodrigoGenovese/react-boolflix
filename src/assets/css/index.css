@@ -1,21 +1,35 @@
 * {
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #434343;
+  color: white;
+  font-family: sans-serif;
 }
 
 .Searchbar {
   padding: 20px;
   background-color: black;
-}
-.GridLayout {
-  height: calc(100vh - 60px);
-  background-color: gray;
+  display: flex;
+  justify-content: space-between;
 }
 
-.Grid-Container {
+.GridContainer {
   display: flex;
   flex-wrap: wrap;
   gap: 20px;
   padding: 30px;
   justify-content: center;
+}
+
+.Card {
+  width: 342px;
+  height: 513px;
+  position: relative;
+  cursor: pointer;
+  background-color: black;
+  color: white;
 }

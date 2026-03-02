@@ -1,5 +1,5 @@
 import { useOutletContext } from "react-router-dom";
-import Card from "./card";
+import Card from "./Card";
 
 export default function Home() {
   const { results } = useOutletContext();

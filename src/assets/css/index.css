@@ -55,8 +55,9 @@ body {
 }
 
 .GridContainer {
-    display: flex;
-    flex-wrap: wrap;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, 342px);
+    justify-content: center;
     gap: 20px;
 }
 
@@ -102,14 +103,19 @@ body {
     color: rgb(241, 196, 15);
 }
 
+.MainContainer {
+    max-width: 1600px;
+    margin: 0 auto;
+}
+
 .CategorySection {
-    padding: 30px 40px;
+    padding: 30px 20px;
 }
 
 .CategoryTitle {
     margin-bottom: 20px;
     font-size: 28px;
-    font-weight: normal;
+    padding-left: 20px;
 }
 
 .FeedbackMessage {

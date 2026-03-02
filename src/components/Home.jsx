@@ -27,7 +27,7 @@ export default function Home() {
     }
 
     return (
-        <div>
+        <div className="MainContainer">
             {movies.length > 0 && (
                 <div className="CategorySection">
                     <h2 className="CategoryTitle">Movies</h2>

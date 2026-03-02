@@ -32,9 +32,15 @@ function AppProvider({ children }) {
             .then(([moviesResponse, tvShowsResponse]) => {
                 setMovies([...moviesResponse.data.results]);
                 setSeries([...tvShowsResponse.data.results]);
+
+                setIstLoadingMovies(false);
+                setIstLoadingSeries(false);
             })
             .catch((error) => {
                 console.error("Errore durante la ricerca:", error);
+
+                setIstLoadingMovies(false);
+                setIstLoadingSeries(false);
             });
     }
 

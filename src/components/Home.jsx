@@ -2,7 +2,29 @@ import { useAppContext } from "../context/AppContext";
 import Card from "./Card";
 
 export default function Home() {
-    const { movies, series } = useAppContext();
+    const { movies, series, isSearching, isLoadingMovies, isLoadingSeries } =
+        useAppContext();
+
+    if (!isSearching) {
+        return (
+            <h2 className="FeedbackMessage">
+                Benvenuto su Boolflix! Cerca un film o una serie TV per
+                iniziare.
+            </h2>
+        );
+    }
+
+    if (isLoadingMovies || isLoadingSeries) {
+        return <h2 className="FeedbackMessage">Caricamento in corso... 🍿</h2>;
+    }
+
+    if (movies.length === 0 && series.length === 0) {
+        return (
+            <h2 className="FeedbackMessage">
+                Nessun risultato trovato. Prova con un altro titolo! 😭
+            </h2>
+        );
+    }
 
     return (
         <div>

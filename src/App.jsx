@@ -2,9 +2,9 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Layout from "./components/Layout";
 import Home from "./components/Home";
 import { AppProvider } from "./context/AppContext";
-import Searchbar from "./components/Searchbar";
 
 export default function App() {
+    // Idealmente avrei voluto avere la sezione MOVIES e la sezione SERIES separate in due "pagine" diverse
     return (
         <AppProvider>
             <BrowserRouter>

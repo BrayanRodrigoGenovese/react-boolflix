@@ -24,11 +24,15 @@ export default function Card({ item }) {
         return flags[lang] || lang.toUpperCase();
     }
 
+    const imageSource = item.poster_path
+        ? `https://image.tmdb.org/t/p/w342${item.poster_path}`
+        : "https://placehold.co/342x513/222222/FFF?text=Poster Non Disponibile";
+
     return (
         <div className="Card">
             <img
                 className="Poster"
-                src={`https://image.tmdb.org/t/p/w342${item.poster_path}`}
+                src={imageSource}
                 alt={item.title || item.name}
             />
             <div className="Info">

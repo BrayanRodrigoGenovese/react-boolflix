@@ -5,20 +5,28 @@ export default function Home() {
     const { movies, series } = useAppContext();
 
     return (
-        <>
-            <div className="GridContainer">
-                <h2>Movies</h2>
-                {movies.map((el) => (
-                    <Card key={el.id} item={el} />
-                ))}
-            </div>
+        <div>
+            {movies.length > 0 && (
+                <div className="CategorySection">
+                    <h2 className="CategoryTitle">Movies</h2>
+                    <div className="GridContainer">
+                        {movies.map((el) => (
+                            <Card key={el.id} item={el} />
+                        ))}
+                    </div>
+                </div>
+            )}
 
-            <div className="GridContainer">
-                <h2>Series</h2>
-                {series.map((el) => (
-                    <Card key={el.id} item={el} />
-                ))}
-            </div>
-        </>
+            {series.length > 0 && (
+                <div className="CategorySection">
+                    <h2 className="CategoryTitle">Series</h2>
+                    <div className="GridContainer">
+                        {series.map((el) => (
+                            <Card key={el.id} item={el} />
+                        ))}
+                    </div>
+                </div>
+            )}
+        </div>
     );
 }

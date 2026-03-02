@@ -13,6 +13,7 @@ export default function Searchbar() {
 
     return (
         <div className="Searchbar">
+            <h1 className="Logo">BOOLFLIX</h1>
             <form onSubmit={formSubmit}>
                 <input
                     type="text"

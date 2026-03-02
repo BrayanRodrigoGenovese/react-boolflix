@@ -1,0 +1,13 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.Searchbar {
+  padding: 20px;
+  background-color: black;
+}
+.GridLayout {
+  height: calc(100vh - 60px);
+  background-color: gray;
+}

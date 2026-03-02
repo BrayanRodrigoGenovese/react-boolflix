@@ -1,5 +1,13 @@
-import "./App.css";
-
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import Layout from "./components/Layout";
 export default function App() {
-  return <></>;
+  return (
+    <>
+      <BrowserRouter>
+        <Routes>
+          <Route path="/" Component={Layout} />
+        </Routes>
+      </BrowserRouter>
+    </>
+  );
 }

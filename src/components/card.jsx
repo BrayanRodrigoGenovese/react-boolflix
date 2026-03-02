@@ -1,4 +1,17 @@
 export default function Card({ item }) {
+  const Stars = () => {
+    const vote = Math.ceil(item.vote_average / 2);
+    const stars = [];
+    for (let i = 1; i <= 5; i++) {
+      if (i <= vote) {
+        stars.push(<i key={i} className="fa-solid fa-star"></i>);
+      } else {
+        stars.push(<i key={i} className="fa-regular fa-star"></i>);
+      }
+    }
+    return stars;
+  };
+
   return (
     <div className="Card">
       <img
@@ -10,6 +23,7 @@ export default function Card({ item }) {
         <p>{item.title || item.name}</p>
         <p>{item.original_title || item.original_name}</p>
         <p>{item.original_language}</p>
+        <p>{Stars()}</p>
         <p>{item.overview || "Nessuna descrizione disponibile."}</p>
       </div>
     </div>

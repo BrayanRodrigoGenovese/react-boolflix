@@ -20,11 +20,21 @@ export default function Card({ item }) {
         alt={item.title || item.name}
       />
       <div className="Info">
-        <p>{item.title || item.name}</p>
-        <p>{item.original_title || item.original_name}</p>
-        <p>{item.original_language}</p>
-        <p>{Stars()}</p>
-        <p>{item.overview || "Nessuna descrizione disponibile."}</p>
+        <p>
+          <strong>Titolo:</strong> {item.title || item.name}
+        </p>
+        <p>
+          <strong>Titolo Originale:</strong>
+          {item.original_title || item.original_name}
+        </p>
+        <p className="Rating">
+          <strong>Voto:</strong>
+          {Stars()}
+        </p>
+        <p>
+          <strong>Overview:</strong>
+          {item.overview || "Nessuna descrizione disponibile."}
+        </p>
       </div>
     </div>
   );

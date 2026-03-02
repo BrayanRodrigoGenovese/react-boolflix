@@ -5,7 +5,7 @@
 }
 
 body {
-  background-color: #434343;
+  background-color: rgb(67, 67, 67);
   color: white;
   font-family: sans-serif;
 }
@@ -56,4 +56,13 @@ body {
 
 .Card:hover .Info {
   opacity: 1;
+}
+
+.Card .Info p {
+  margin-bottom: 10px;
+  font-size: 14px;
+}
+
+.Rating i {
+  color: rgb(241, 196, 15);
 }
